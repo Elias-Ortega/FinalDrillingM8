@@ -32,7 +32,6 @@ const User = sequelize.define('User', {
     email: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true,
         validate: {
             notEmpty: {
                 args: true,
@@ -43,6 +42,10 @@ const User = sequelize.define('User', {
                 msg: "Formato de correo inválido",
             },
         },
+        unique: {
+            args: true,
+            msg: "correo electronico actualmente registrado en la base de datos!"
+        }
     },
     password: {
         type: DataTypes.STRING(200),

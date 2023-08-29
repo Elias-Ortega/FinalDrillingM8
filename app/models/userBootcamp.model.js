@@ -44,7 +44,7 @@ UserBootcamp.belongsTo(Bootcamp, {
     targetKey: 'id'
 });
 
-
+/* sequelize.sync(); */
  
 
 export {

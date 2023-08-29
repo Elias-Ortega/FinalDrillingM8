@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from "cors";
-
+import { routerUsers } from '../routes/user.routes.js';
+import { routerBootcamps } from '../routes/bootcamp.routes.js';
 
 
 export default class Server {
@@ -22,7 +23,8 @@ export default class Server {
 
     
     routes(){
-        
+        this.app.use('/api/user', routerUsers);
+        this.app.use('/api/bootcamp',routerBootcamps);
         
     }
 

@@ -23,6 +23,7 @@ export default class Server {
 
     
     routes(){
+        this.app.use('/api', routerUsers)
         this.app.use('/api/user', routerUsers);
         this.app.use('/api/bootcamp',routerBootcamps);
         

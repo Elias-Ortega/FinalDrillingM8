@@ -21,7 +21,7 @@ const loginUser = async (req = request, res = response) => {
     }
     const token = await generateJWT(user.id);
     res.json({
-        msg: 'Login correcto',
+        msg: 'Login correcto',        
         token
     });
 }
@@ -72,7 +72,7 @@ const findAll = async (req = request, res = response) => {
 };
 
 
-const findUserById = async (req = request, res = response) => {
+/* const findUserById = async (req = request, res = response) => {
     let id = req.params.id;
     try {
 
@@ -95,7 +95,7 @@ const findUserById = async (req = request, res = response) => {
         });
     }
 
-}
+} */
 
 const updateUserById = async (req = request, res = response) => {
     let id = req.params.id;
@@ -159,8 +159,7 @@ const deleteUserById = async (req = request, res = response) => {
 export {
     loginUser,
     createUser,
-    findAll,
-    findUserById,
+    findAll,    
     updateUserById,
     deleteUserById
 }
